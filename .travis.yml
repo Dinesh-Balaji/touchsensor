@@ -37,4 +37,4 @@ before_script:
 
 script:
   - ./gradlew clean build
-  - ./gradlew sonarqube -Dsonar.host.url=http://localhost:9000/
+  - gradlew sonarqube -Dsonar.host.url=http://localhost:9000/
