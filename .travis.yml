@@ -1,6 +1,14 @@
-language: android
+language:
+  - android
+  - java
 sudo: required
 jdk: oraclejdk8
+
+
+addons:
+  sonarqube:
+    token:
+        secure: beb025cb9b25b80e4d67faa6a105099cce880411 	
 
 env:
   global:
@@ -37,3 +45,4 @@ before_script:
 
 script:
   - ./gradlew clean build
+  - sonar-scanner
